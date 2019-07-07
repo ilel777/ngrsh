@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-5">
+   <app-recipe-list></app-recipe-list>
+  </div>
+  <div class="col-7">
+    <div [@routeAnimation]="getAnimationData(routerOutlet)">
+      <router-outlet #routerOutlet="outlet"></router-outlet>
+    </div>
+    <!-- <router-outlet></router-outlet>
+    <!-- <app-recipe-detail *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></app-recipe-detail>
+    <ng-template #infoText>
+      <p>Please Select a Recipe</p>
+    </ng-template> -->
+  </div>
+</div>

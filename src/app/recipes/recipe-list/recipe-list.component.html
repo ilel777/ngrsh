@@ -1,0 +1,8 @@
+<button type="button" name="button" class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
+<hr>
+<div class="list-group">
+  <!-- <button type="button" class="list-group-item"  *ngFor="let recipeEl of recipes" style="cursor: pointer" (click)="onRecipeClicked(recipeEl)"> -->
+  <button type="button" class="list-group-item"  *ngFor="let recipeEl of recipes;index as i" style="cursor: pointer" [routerLink]="['/recipes',i]" routerLinkActive="active">
+    <app-recipe-item  [recipe]="recipeEl"></app-recipe-item>
+  </button>
+</div>
